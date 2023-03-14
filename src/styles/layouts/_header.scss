@@ -1,0 +1,44 @@
+@use "../base/mixins" as *;
+
+.header {
+  position: relative;
+  padding: 3.2rem 0 4rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include mq(tablet) {
+    padding: 4rem 0 5.3rem 0;
+  }
+
+  @include mq(laptop) {
+    padding: 4.356rem 0 4.344rem;
+  }
+
+  &-img {
+    width: 16.3rem;
+
+    @include mq(tablet) {
+      width: 23.6rem;
+    }
+  }
+
+  &-nav {
+    display: none;
+
+    @include mq(tablet) {
+      display: block;
+
+      &-list {
+        display: flex;
+        gap: 3.2rem;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.923077px;
+        color: #83888f;
+      }
+    }
+  }
+}
