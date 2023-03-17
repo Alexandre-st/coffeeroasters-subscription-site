@@ -6,6 +6,9 @@
 @use "./layouts/header";
 
 // == PAGES == //
+@use "./pages/homepage";
+@use "./pages/about";
+@use "./pages/createPlan";
 
 // == COMPONENTS == //
 @use "./components/menu";

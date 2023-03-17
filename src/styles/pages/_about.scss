@@ -1,0 +1,50 @@
+@use "../base/mixins" as *;
+
+.hero {
+  &-child {
+    height: 40rem;
+
+    @include mq(laptop) {
+      height: 45rem;
+    }
+
+    &-about {
+      background-image: url("/src/assets/about/mobile/image-hero-whitecup.jpg");
+
+      @include mq(tablet) {
+        background-image: url("/src/assets/about/tablet/image-hero-whitecup.jpg");
+      }
+
+      @include mq(laptop) {
+        background-image: url("/src/assets/about/desktop/image-hero-whitecup.jpg");
+      }
+
+      &-content {
+        padding-top: 11rem;
+        margin: 0 2.4rem;
+        text-align: center;
+
+        @include mq(tablet) {
+          text-align: start;
+          width: 39.8rem;
+          margin: 0 0 0 5.8rem;
+          padding-top: 11.8rem;
+        }
+
+        @include mq(laptop) {
+          width: 44.5rem;
+          padding-top: 13.7rem;
+          margin: 0 0 0 8.5rem;
+        }
+      }
+
+      &-text {
+        margin-top: 2rem;
+
+        @include mq(laptop) {
+          margin-top: 2.4rem;
+        }
+      }
+    }
+  }
+}

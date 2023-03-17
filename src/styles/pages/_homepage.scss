@@ -1,0 +1,70 @@
+@use "../base/mixins" as *;
+
+.hero {
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 1rem;
+
+  &-main {
+    background-image: url("/src/assets/home/mobile/image-hero-coffeepress.jpg");
+    height: 50rem;
+
+    @include mq(tablet) {
+      background-image: url("/src/assets/home/tablet/image-hero-coffeepress.jpg");
+    }
+
+    @include mq(laptop) {
+      background-image: url("/src/assets/home/desktop/image-hero-coffeepress.jpg");
+      height: 60rem;
+    }
+
+    &-content {
+      margin: 0 2.4rem 0 2.4rem;
+      padding-top: 10rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      @include mq(tablet) {
+        margin: 0 0 0 5.8rem;
+        padding-top: 10.4rem;
+        align-items: flex-start;
+        text-align: start;
+        width: 39.8rem;
+      }
+
+      @include mq(laptop) {
+        margin: 0 0 0 8.5rem;
+        padding-top: 11.7rem;
+        width: 49.3rem;
+      }
+    }
+
+    &-title {
+      font-size: 4rem;
+      line-height: 4rem;
+      font-weight: 900;
+      color: #fefcf7;
+
+      @include mq(tablet) {
+        font-size: 4.8rem;
+        line-height: 4.8rem;
+      }
+
+      @include mq(laptop) {
+        font-size: 7.2rem;
+        line-height: 7.2rem;
+      }
+    }
+
+    &-text {
+      margin: 2.4rem 0 3.9rem 0;
+
+      @include mq(laptop) {
+        margin: 3.2rem 0 5.6rem 0;
+        width: 44.4rem;
+      }
+    }
+  }
+}

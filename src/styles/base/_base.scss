@@ -11,7 +11,7 @@ h2,
 h3,
 h4,
 h5,
-button {
+.button {
   font-family: "Fraunces", serif;
 }
 
@@ -25,5 +25,46 @@ button {
 
   @include mq(laptop) {
     width: min(100% - 16rem, 128rem);
+  }
+}
+
+.title {
+  font-size: 4rem;
+  line-height: 4.8rem;
+  font-weight: 900;
+
+  &-hero {
+    color: #fefcf7;
+  }
+}
+
+.text {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+
+  @include mq(laptop) {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+
+  &-hero {
+    color: #fefcf7;
+    opacity: 0.8;
+  }
+}
+
+.button {
+  height: 5.6rem;
+  background-color: #0e8784;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  font-weight: 900;
+  color: #fefcf7;
+  border-radius: 6px;
+
+  &-shared {
+    width: 21.7rem;
+    padding: 1.5rem 3.2rem 1.6rem 3.1rem;
   }
 }

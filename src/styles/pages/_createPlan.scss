@@ -1,0 +1,21 @@
+@use "../base/mixins" as *;
+
+.hero-child-create {
+  background-image: url("/src/assets/plan/mobile/image-hero-blackcup.jpg");
+
+  // &-content {
+
+  // }
+
+  &-text {
+    margin-top: 2.2rem;
+
+    @include mq(tablet) {
+      margin-top: 2.4rem;
+    }
+
+    @include mq(laptop) {
+      margin-top: 3.2rem;
+    }
+  }
+}
